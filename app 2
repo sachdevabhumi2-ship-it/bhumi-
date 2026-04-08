@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 9: Risk Analysis – EduChain India</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        h1 { color: #c0392b; text-align: center; }
+        h2 { color: #2c3e50; border-bottom: 3px solid #e74c3c; padding-bottom: 10px; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; vertical-align: top; }
+        th { background: #c0392b; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .high-risk { background: #fadbd8; }
+        .medium-risk { background: #fdebd0; }
+        .summary { background: #f8f9fa; padding: 25px; border-left: 5px solid #c0392b; margin-top: 25px; line-height: 1.8; }
+        .footer { text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ Experiment 9: Blockchain Risk Management & Compliance Analysis</h1>
+        <p style="text-align:center;"><strong>Startup:</strong> EduChain India | <strong>Student:</strong> Bhumi Sachdeva | <strong>Date:</strong> 08-Apr-2026</p>
+
+        <h2>Risk Analysis Table</h2>
+        <table>
+            <tr><th>Risk Type</th><th>Possible Problem</th><th>Impact on Business</th><th>Solution</th></tr>
+            <tr class="high-risk"><td><strong>Security Risk</strong></td><td>Student or college administrator shares/loses private wallet key; hacker steals credentials</td><td>Fake persons may access, alter, or delete academic records; loss of trust; legal liability</td><td>Educate users on key security; implement 2FA; use multi-signature wallets; provide key recovery via OTP</td></tr>
+            <tr class="high-risk"><td><strong>Data Entry Risk</strong></td><td>University staff uploads wrong degree information before hashing</td><td>Incorrect data permanently stored on blockchain; student receives invalid certificate; reputational damage</td><td>3-level verification (auto-validation, faculty approval, student confirmation); 48-hour correction window</td></tr>
+            <tr class="high-risk"><td><strong>Privacy Risk</strong></td><td>Blockchain is public; anyone can query and see student details</td><td>Personal information leaks; violates DPDP Act 2023; legal penalties up to ₹250 crore</td><td>Store only encrypted hashes on-chain; keep personal data off-chain; use zero-knowledge proofs</td></tr>
+            <tr class="medium-risk"><td><strong>Legal/Compliance Risk</strong></td><td>Government (UGC, AICTE) does not recognize blockchain certificates</td><td>Certificates not accepted for jobs/higher studies; startup becomes useless</td><td>Align with UGC/AICTE standards; obtain ISO 27001; integrate with DigiLocker</td></tr>
+            <tr class="medium-risk"><td><strong>Technical Risk</strong></td><td>Website crashes due to high traffic; blockchain congestion; smart contract bugs</td><td>Students cannot access certificates during job applications; loss of credibility</td><td>Cloud auto-scaling; layer-2 scaling; smart contract audits; 99.9% uptime SLA; backup database</td></tr>
+            <tr class="medium-risk"><td><strong>Adoption/Trust Risk</strong></td><td>Colleges resist digital transformation; employers distrust blockchain certificates</td><td>Low market penetration; revenue targets missed; startup fails</td><td>Pilot programs with top colleges; free first-year; employer workshops; LinkedIn integration</td></tr>
+        </table>
+
+        <h2>Summary (178 words)</h2>
+        <div class="summary">
+            <p>EduChain India faces six major risks that must be mitigated before launch. Security risks include private key theft, which could allow hackers to forge certificates—mitigated through 2FA and user education. Data entry errors by university staff could permanently store incorrect information on the immutable blockchain, so a 3-level verification process with a 48-hour correction window is essential. Privacy risks arise from blockchain's transparency; storing only encrypted hashes on-chain and keeping personal data off-chain ensures DPDP Act 2023 compliance. Legal risks involve government non-recognition of blockchain certificates, addressed by aligning with UGC/AICTE standards and integrating with DigiLocker. Technical risks like system crashes during peak traffic are mitigated through cloud auto-scaling and backup databases. Finally, adoption risks stem from institutional resistance to digital transformation, requiring pilot programs, free trials, and employer education workshops. A risk priority matrix scores Data Entry Risk highest (16/25) due to frequent human error potential, followed by Security and Privacy risks (15/25 each). Proactive risk management ensures EduChain launches with robust safeguards, maintaining user trust, regulatory compliance, and business continuity.</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Experiment 9:</strong> Blockchain Risk Management and Compliance Analysis | <strong>Course:</strong> [Your Course Name]</p>
+        </div>
+    </div>
+</body>
+</html>
