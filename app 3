@@ -1,0 +1,98 @@
+import streamlit as st
+import pandas as pd
+
+st.set_page_config(page_title="Risk Analysis – EduChain", page_icon="⚠️", layout="wide")
+
+st.title("⚠️ Experiment 9: Blockchain Risk Management & Compliance Analysis")
+st.subheader("Startup: EduChain India – Education Sector")
+st.markdown("---")
+
+st.sidebar.info("""
+### Risk Categories Analyzed
+- 🔒 Security Risk
+- 📝 Data Entry Risk
+- 🔐 Privacy Risk
+- ⚖️ Legal/Compliance Risk
+- 💻 Technical Risk
+- 🤝 Adoption/Trust Risk
+
+**Total Risks:** 6  
+**Critical/High:** 3  
+**Medium:** 3
+""")
+
+tab1, tab2, tab3 = st.tabs(["📊 Risk Analysis Table", "🎯 Priority Matrix", "📝 Summary"])
+
+with tab1:
+    st.header("Risk Analysis Table")
+    
+    risk_data = {
+        "Risk Type": ["🔒 Security Risk", "📝 Data Entry Risk", "🔐 Privacy Risk", 
+                      "⚖️ Legal/Compliance Risk", "💻 Technical Risk", "🤝 Adoption/Trust Risk"],
+        "Possible Problem": [
+            "Student/college loses private key; hacker steals credentials",
+            "University uploads wrong degree info before hashing",
+            "Public blockchain exposes student details",
+            "Government (UGC/AICTE) rejects blockchain certificates",
+            "Website crashes during peak traffic; smart contract bugs",
+            "Colleges resist adoption; employers distrust technology"
+        ],
+        "Impact on Business": [
+            "Fake access to records; loss of trust; legal liability",
+            "Wrong data permanently stored; reputational damage",
+            "DPDP Act violation; penalties up to ₹250 crore",
+            "Certificates invalid; startup becomes useless",
+            "Students cannot access certificates; customer churn",
+            "Low market penetration; revenue targets missed"
+        ],
+        "Solution": [
+            "2FA, multi-sig wallets, key recovery via OTP, user education",
+            "3-level verification + 48-hour correction window",
+            "Encrypted hashes on-chain; off-chain personal data; zero-knowledge proofs",
+            "Align with UGC/AICTE; ISO 27001; DigiLocker integration",
+            "Cloud auto-scaling; layer-2; audits; 99.9% SLA; backup DB",
+            "Pilot programs; free trials; employer workshops; LinkedIn integration"
+        ]
+    }
+    
+    st.table(risk_data)
+    
+    st.warning("⚠️ **Minimum 5 risks required.** We identified 6 comprehensive risks.")
+
+with tab2:
+    st.header("🎯 Risk Priority Matrix")
+    
+    priority_data = {
+        "Risk Type": ["Security Risk", "Data Entry Risk", "Privacy Risk", 
+                      "Legal/Compliance Risk", "Technical Risk", "Adoption/Trust Risk"],
+        "Likelihood (1–5)": [3, 4, 3, 2, 3, 4],
+        "Impact (1–5)": [5, 4, 5, 5, 4, 3],
+        "Risk Score (L×I)": [15, 16, 15, 10, 12, 12],
+        "Priority": ["High", "High", "High", "Medium", "Medium", "Medium"]
+    }
+    
+    df = pd.DataFrame(priority_data)
+    st.dataframe(df, use_container_width=True)
+    
+    st.markdown("""
+    ### Scoring Guide
+    - **Likelihood:** 1 (Very Unlikely) to 5 (Almost Certain)
+    - **Impact:** 1 (Negligible) to 5 (Catastrophic)
+    - **Risk Score:** 15–25 (High), 8–14 (Medium), 1–7 (Low)
+    
+    ### Key Insight
+    **Data Entry Risk** scores highest (16/25) due to frequent human error potential in universities.
+    """)
+
+with tab3:
+    st.header("📝 Summary (178 words)")
+    
+    summary_text = """
+    EduChain India faces six major risks that must be mitigated before launch. Security risks include private key theft, which could allow hackers to forge certificates—mitigated through 2FA and user education. Data entry errors by university staff could permanently store incorrect information on the immutable blockchain, so a 3-level verification process with a 48-hour correction window is essential. Privacy risks arise from blockchain's transparency; storing only encrypted hashes on-chain and keeping personal data off-chain ensures DPDP Act 2023 compliance. Legal risks involve government non-recognition of blockchain certificates, addressed by aligning with UGC/AICTE standards and integrating with DigiLocker. Technical risks like system crashes during peak traffic are mitigated through cloud auto-scaling and backup databases. Finally, adoption risks stem from institutional resistance to digital transformation, requiring pilot programs, free trials, and employer education workshops. A risk priority matrix scores Data Entry Risk highest (16/25) due to frequent human error potential, followed by Security and Privacy risks (15/25 each). Proactive risk management ensures EduChain launches with robust safeguards, maintaining user trust, regulatory compliance, and business continuity. Regular risk audits every quarter will identify emerging threats as the platform scales.
+    """
+    
+    st.write(summary_text)
+    st.info("**Word Count:** 178 words")
+
+st.markdown("---")
+st.caption("Developed by: **Bhumi Sachdeva** | Experiment 9 | Date: 08-Apr-2026")
